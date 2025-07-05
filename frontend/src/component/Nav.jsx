@@ -8,7 +8,7 @@ import { useContext } from "react";
 import { userDataContext } from "../context/UserContext";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { authDataContext } from "../context/authContext";
+import { authDataContext } from "../context/AuthContext";
 import axios from "axios";
 import { MdHome } from "react-icons/md";
 import { HiOutlineCollection } from "react-icons/hi";
