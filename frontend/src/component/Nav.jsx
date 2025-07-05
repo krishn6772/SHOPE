@@ -16,7 +16,7 @@ import { MdContacts } from "react-icons/md";
 import { shopDataContext } from "../context/ShopContext";
 
 const Nav = () => {
-    let { getCurrentUser, userData } = useContext(userDataContext);
+    let { getCurrentUser, userData, setUserData } = useContext(userDataContext);
     let { serverUrl } = useContext(authDataContext);
     let { showSearch, setShowSearch, search, setSearch, getCartCount} =
         useContext(shopDataContext);
@@ -28,7 +28,9 @@ const Nav = () => {
             const result = await axios.get(serverUrl + "/api/auth/logout", {
                 withCredentials: true,
             });
+       setUserData(null); // Optional: clear client-side user context
         getCurrentUser();  // Optional: refresh state
+
         navigate('/login'); // Optional: redirect to login
 
         } catch (error) {
