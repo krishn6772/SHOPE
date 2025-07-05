@@ -17,7 +17,7 @@ let app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"], // Adjust this to your frontend URL
+    origin: ["https://shope-frontend.onrender.com", "https://shope-admin.onrender.com"], // Adjust this to your frontend URL
     credentials: true, // Allow cookies to be sent with requests
 }));
 // Routes
