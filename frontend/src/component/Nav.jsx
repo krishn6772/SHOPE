@@ -28,8 +28,9 @@ const Nav = () => {
             const result = await axios.get(serverUrl + "/api/auth/logout", {
                 withCredentials: true,
             });
-            console.log("Logout successful:", result.data);
-            getCurrentUser(); // Refresh user data after logout
+        getCurrentUser();  // Optional: refresh state
+        navigate('/login'); // Optional: redirect to login
+
         } catch (error) {
             console.error("Logout failed:", error);
         }
