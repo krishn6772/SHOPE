@@ -1,4 +1,3 @@
-import React from 'react'
 import Nav from '../component/Nav'
 import Sidebar from '../component/Sidebar'
 import { useState } from 'react'
